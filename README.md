@@ -14,13 +14,9 @@ The pipeline consists of several key components:
    - Runs in a Docker container
    - Uses PostgreSQL as its metadata database
    - Handles workflow orchestration and scheduling
+   - Leverages Cosmos to integrate dbt projects directly into Airflow DAGs, providing better visibility and control over dbt transformations.
 
-3. **Cosmos**
-   - Integrates dbt projects directly into Airflow DAGs
-   - Provides better visibility and control over dbt transformations
-   - Enables task-level monitoring and logging
-
-4. **dbt Core**
+3. **dbt Core**
    - Handles data transformations
    - Organized in layers: staging, intermediate, and marts
    - Manages data model dependencies
@@ -56,20 +52,63 @@ enterprise_merchants_analytics/
     └── dbt_daily_run.py       # Daily dbt pipeline
 ```
 
-## Data Models
+## Data Modeling Approach
 
-### Staging Layer
-- `stg_devices`: Cleaned device data with standardized fields
-- `stg_stores`: Cleaned store data with standardized fields
-- `stg_transactions`: Cleaned transaction data with standardized fields
+The project follows a layered data modeling approach to ensure clean, maintainable, and scalable transformations:
 
-### Intermediate Layer
-- `int_daily_transactions`: Daily transaction aggregations and metrics
+![dbt Lineage Graph](images/dbt_lineage.png)
 
-### Marts Layer
-- `fct_transactions`: Core transaction facts enriched with store and device dimensions
+*The diagram above shows the data lineage of our dbt models, illustrating how data flows from staging through intermediate to marts layer.*
 
-Each layer has its own `schema.yml` file that defines the model configurations, tests, and documentation.
+### Staging Layer (Basic Cleaning)
+The staging layer focuses on basic data cleaning and standardization:
+- Renames columns to follow consistent naming conventions
+- Performs basic data type conversions
+- Implements simple data quality checks
+- No business logic at this stage
+
+Models:
+- `stg_devices`: Standardizes device data, mapping raw fields (id → device_id, type → device_type)
+- `stg_stores`: Cleans store information with proper column naming (id → store_id, name → store_name)
+- `stg_transactions`: Incrementally processes transaction data with proper timestamps and amounts
+
+### Intermediate Layer (Wide Tables)
+The intermediate layer joins related tables and implements initial business logic:
+- Creates denormalized views of the data
+- Combines related tables through joins
+- Prepares data for final aggregations
+
+Models:
+- `int_store_transactions`: Combines transaction data with store and device information, creating a wide table that includes:
+  - Transaction details (ID, timestamp, amount)
+  - Store information (ID, name, address, city, country)
+  - Device details (ID, type)
+
+### Marts Layer (Aggregated Data)
+The marts layer creates final business-facing data models with specific use cases:
+- Implements complex business logic
+- Creates aggregated views
+- Provides data ready for reporting and analysis
+
+Models:
+- `mart_top_stores`: Identifies top 10 performing stores based on:
+  - Total transaction count
+  - Total transaction amount
+  - Includes full store location details
+- `mart_store_first_transactions`: Analyzes store performance by tracking:
+  - First transaction timestamp
+  - Fifth transaction timestamp
+  - Time taken to reach fifth transaction
+- `mart_device_transactions`: Provides device performance metrics:
+  - Transaction count by device type
+  - Transaction percentage distribution
+
+Each layer builds upon the previous one, ensuring:
+- Clear data lineage
+- Modular and maintainable code
+- Efficient processing
+- Easy troubleshooting
+- Scalable architecture
 
 ## Design Decisions
 
