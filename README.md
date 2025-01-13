@@ -24,7 +24,7 @@ The pipeline consists of several key components:
 ## Project Structure
 
 ```
-enterprise_merchants_analytics/
+dbt-airflow-design/
 ├── .env.example                  # Example environment configuration
 ├── docker-compose.yml            # Container orchestration
 ├── Dockerfile                    # Airflow container config
@@ -147,7 +147,7 @@ Consider dbt Cloud when:
 1. Clone the repository:
 ```
 git clone <repository-url>
-cd enterprise_merchants_analytics
+cd dbt-airflow-design
 ```
 
 2. Create and configure environment variables:
@@ -212,7 +212,7 @@ The current approach allows for easy project setup and testing, while the underl
 ### Raw Data Storage
 Sample data files are located in:
 ```
-enterprise_merchants_analytics/
+dbt-airflow-design/
 └── data/                   # Raw CSV files location
     ├── stores.csv         # Store master data
     ├── devices.csv        # Device information
