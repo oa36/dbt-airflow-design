@@ -1,0 +1,106 @@
+version: 2
+
+sources:
+  - name: crm
+    database: enterprise_analytics
+    schema: crm_raw
+    tables:
+      - name: stores
+        description: Raw store data
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: store_name
+            description: Name of the store
+            tests:
+              - not_null
+          - name: location
+            description: Store location
+            tests:
+              - not_null
+
+      - name: transactions
+        description: Raw transaction data
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: store_id
+            description: Foreign key to stores
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('stg_stores')
+                  field: store_id
+          - name: amount
+            description: Transaction amount in USD
+            tests:
+              - not_null
+          - name: timestamp
+            description: Transaction timestamp
+            tests:
+              - not_null
+
+      - name: devices
+        description: Raw device data
+        columns:
+          - name: id
+            description: Primary key
+            tests:
+              - unique
+              - not_null
+          - name: store_id
+            description: Foreign key to stores
+            tests:
+              - not_null
+          - name: device_type
+            description: Type of device
+            tests:
+              - not_null
+
+models:
+  - name: stg_stores
+    description: Cleaned store data
+    columns:
+      - name: store_id
+        description: Unique identifier for each store
+        tests:
+          - unique
+          - not_null
+      - name: store_name
+        description: Name of the store
+        tests:
+          - not_null
+      - name: location
+        description: Store location
+        tests:
+          - not_null
+
+  - name: stg_transactions
+    description: Cleaned transaction data
+    columns:
+      - name: transaction_id
+        description: Unique identifier for each transaction
+        tests:
+          - unique
+          - not_null
+      - name: store_id
+        description: Foreign key to stores table
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_stores')
+              field: store_id
+      - name: amount
+        description: Transaction amount in USD
+        tests:
+          - not_null
+      - name: timestamp
+        description: Transaction timestamp
+        tests:
+          - not_null 

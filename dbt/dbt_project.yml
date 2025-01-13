@@ -1,0 +1,40 @@
+name: 'enterprise_merchants_analytics'
+version: '1.0.0'
+config-version: 2
+
+# This setting configures which "profile" dbt uses for this project.
+profile: 'default'
+
+# Specify minimum dbt version
+require-dbt-version: [">=1.8.0", "<1.9.0"]
+
+# Model configurations
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+  - "logs"
+
+# Custom variables
+vars:
+  environment: "{{ target.name }}"
+  cosmos_enabled: true
+
+# Global configurations
+models:
+  enterprise_merchants_analytics:
+    staging:
+      +materialized: table
+      +schema: staging
+    intermediate:
+      +materialized: table
+      +schema: intermediate
+    marts:
+      +materialized: table
+      +schema: marts
