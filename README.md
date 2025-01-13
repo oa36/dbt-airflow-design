@@ -2,9 +2,6 @@
 
 A production-ready data pipeline that processes merchant transactions and store data using dbt Core, Apache Airflow, and PostgreSQL.
 
-## Overview
-This project implements a scalable data pipeline for processing merchant transaction data. It follows modern data engineering practices with a modular design pattern and uses industry-standard tools.
-
 ## Architecture
 
 The pipeline consists of several key components:
@@ -147,48 +144,7 @@ The pipeline runs automatically daily at 5 AM through Airflow, but you can also 
 2. **dbt Documentation**
    - Generate docs: `dbt docs generate`
    - Serve locally: `dbt docs serve`
-
-## Development Workflow
-
-1. Create feature branch:
-```bash
-git checkout -b your-feature-name
-```
-
-2. Make changes to models or DAGs
-
-3. Run tests:
-```bash
-# Test dbt models
-docker-compose exec airflow bash -c "cd /opt/dbt && dbt test"
-
-# Test specific models
-docker-compose exec airflow bash -c "cd /opt/dbt && dbt test --models staging"
-
-# Generate documentation
-docker-compose exec airflow bash -c "cd /opt/dbt && dbt docs generate"
-```
-
-4. Submit pull request
-
-## Troubleshooting
-
-### Common Issues
-
-1. **dbt Connection Issues**
-   - Verify PostgreSQL is running: `docker-compose ps`
-   - Check credentials in profiles.yml
-   - Run `dbt debug` for connection details
-
-2. **Airflow DAG Issues**
-   - Check Airflow logs in UI
-   - Verify DAG syntax: `python airflow/dags/dbt_payment_analytics.py`
-
-3. **Data Loading Issues**
-   - Verify CSV files are in correct location
-   - Check file permissions
-   - Review staging model SQL for errors
-
+  
 ## Data Ingestion
 
 ### Note on Data Source
