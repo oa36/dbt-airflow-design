@@ -123,10 +123,22 @@ cp .env.example .env
 ```bash
 docker-compose up -d
 ```
+This command will spin up 5 Docker containers: 4 for Airflow components (webserver, scheduler, worker, metadata-db) and 1 for the analytics warehouse.
 
 4. Access the services:
 - Airflow UI: http://localhost:8080 (username: admin, password: admin)
 - PostgreSQL: localhost:5433
+
+5. Configure Warehouse Connection:
+- In Airflow UI, go to Admin > Connections
+- Add a new connection:
+  - Conn Id: analytics_db
+  - Conn Type: Postgres
+  - Host: db
+  - Schema: marts
+  - Login: test_user
+  - Password: password
+  - Port: 5432
 
 ## Usage
 
