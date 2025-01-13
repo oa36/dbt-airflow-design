@@ -88,7 +88,6 @@ Each layer has its own `schema.yml` file that defines the model configurations, 
 3. **dbt Core vs dbt Cloud**
    - Complete control over infrastructure
    - Cost-effective for smaller teams
-   - Better for learning and development
 
 ### Alternative: dbt Cloud
 While this project uses dbt Core, [dbt Cloud](https://github.com/dbt-labs/airflow-dbt-cloud) is a viable alternative that offers:
