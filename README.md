@@ -27,6 +27,7 @@ The pipeline consists of several key components:
 
 ## Project Structure
 
+```
 enterprise_merchants_analytics/
 ├── .env.example                  # Example environment configuration
 ├── docker-compose.yml            # Container orchestration
@@ -37,7 +38,7 @@ enterprise_merchants_analytics/
 │   ├── transactions.csv
 │   ├── stores.csv
 │   └── devices.csv
-├── db/                          #Anaytics Warehouse initialization
+├── db/                          # Analytics Warehouse initialization
 │   ├── Dockerfile
 │   ├── init.sql
 │   ├── load_data.py
@@ -50,9 +51,10 @@ enterprise_merchants_analytics/
 │   └── models/
 │       ├── staging/            # Raw data cleaning
 │       ├── intermediate/       # Business logic
-│       └── marts/              # Aggregated models
-├── dags/                       # Airflow DAG definitions
-│   └── dbt_daily_run.py       # Daily dbt pipeline
+│       └── marts/             # Aggregated models
+└── dags/                       # Airflow DAG definitions
+    └── dbt_daily_run.py       # Daily dbt pipeline
+```
 
 ## Data Models
 
