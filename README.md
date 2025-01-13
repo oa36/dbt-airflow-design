@@ -91,10 +91,11 @@ The marts layer creates final business-facing data models with specific use case
 - Provides data ready for reporting and analysis
 
 Models:
-- `mart_top_stores`: Identifies top 10 performing stores based on:
-  - Total transaction count
+- `mart_top_stores`: Aggregates store performance metrics:
+  - Store identification (ID and name)
+  - Total unique transaction count
   - Total transaction amount
-  - Includes full store location details
+  - Orders results by total amount in descending order
 - `mart_store_first_transactions`: Analyzes store performance by tracking:
   - First transaction timestamp
   - Fifth transaction timestamp
