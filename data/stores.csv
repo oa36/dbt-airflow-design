@@ -1,0 +1,101 @@
+id;name;address;city;country;created_at;typology;customer_id
+1;Vulputate Risus PC;Ap #124-1954 Adipiscing St.;Santa Inês;Belgium;03/24/2023 4:52:21;Florist;31
+2;Dui Fusce Associates;Ap #768-3045 Sed, Street;Patarrá;Poland;08/22/2023 3:45:35;Other;31
+3;Nec Ante Ltd;4587 Tincidunt Avenue;Gaspé;Costa Rica;11/17/2022 10:32:56;FoodTruck;39
+4;At Auctor Limited;1962 Lorem Avenue;Siquirres;Nigeria;12/15/2023 1:13:46;Hotel;42
+5;Ac Turpis Limited;Ap #844-1075 A, Av.;Mazenzele;Ireland;04/13/2023 11:58:34;Restaurant;33
+6;Mauris Nulla Integer Foundation;Ap #621-7833 Ut Avenue;Móstoles;India;01/27/2023 11:50:22;FoodTruck;36
+7;Mauris Morbi PC;P.O. Box 475, 7719 Cursus St.;Sapele;Mexico;10/27/2022 2:11:01;Service;13
+8;In LLP;6182 Consequat Rd.;Oaxaca;Indonesia;04/19/2022 1:53:18;Other;21
+9;Magna Corporation;Ap #356-9872 Mus. Av.;Dutse;Belgium;12/04/2023 7:25:49;Service;5
+10;At Libero Limited;Ap #822-4123 Nec Av.;Białystok;India;10/02/2023 11:58:22;Other;22
+11;Lectus Rutrum Corporation;287-7966 In Rd.;Hoogeveen;Brazil;11/08/2022 3:52:10;Florist;37
+12;Eu Nibh LLC;Ap #207-7061 Purus Av.;João Pessoa;Australia;08/20/2022 10:27:04;Florist;7
+13;At LLP;Ap #981-5468 Id St.;Chimbote;France;08/05/2022 9:38:03;FoodTruck;19
+14;In Magna Phasellus Ltd;P.O. Box 189, 8776 Cursus Road;Ödemiş;India;02/16/2023 3:29:06;Restaurant;39
+15;Interdum Ligula PC;845-2200 Eros. St.;Allentown;Belgium;10/12/2023 4:26:02;Press;2
+16;Cum Sociis Natoque PC;698-5310 Sagittis. St.;Shepparton;Costa Rica;09/30/2022 9:59:02;Hotel;25
+17;Adipiscing Corp.;3529 Donec Avenue;San Pablo;Singapore;04/23/2023 4:59:49;Florist;42
+18;Sapien Incorporated;7787 Mi Ave;Brussel;South Africa;05/23/2022 3:47:43;FoodTruck;31
+19;Magnis Dis Inc.;185-6396 Et Av.;Florencia;Netherlands;06/02/2022 7:59:07;Press;10
+20;Metus Aliquam Associates;Ap #600-4448 Magna. St.;Steendorp;Singapore;01/03/2023 12:52:05;Service;7
+21;Pede Suspendisse Company;P.O. Box 917, 8477 Et Avenue;Cork;Mexico;06/27/2022 11:53:36;Press;43
+22;Tincidunt Nunc Industries;Ap #636-7983 Enim Rd.;Jaén;Netherlands;11/11/2023 11:06:57;Press;34
+23;Non LLP;Ap #430-8283 Sapien Street;Rankweil;Italy;03/08/2023 10:26:09;Hotel;10
+24;Mollis Dui LLP;Ap #779-1314 Mus. Rd.;Baardegem;United Kingdom;06/20/2022 8:39:38;FoodTruck;7
+25;Nulla Magna Ltd;Ap #953-3178 A Ave;Pohang;Colombia;07/08/2022 8:34:47;Restaurant;4
+26;Ullamcorper Duis At Limited;Ap #144-5035 Ipsum. Av.;Uribia;Nigeria;10/16/2022 12:33:04;Beauty;42
+27;Duis Sit Incorporated;Ap #927-6782 Lacus. Rd.;Sembawang;South Korea;06/24/2023 12:17:25;Florist;8
+28;Et Magna Incorporated;649-4506 Dolor. St.;Srinagar;Canada;07/29/2022 4:05:03;Hotel;49
+29;Sed Ltd;329-5885 Nibh. Ave;Hebei;South Africa;04/29/2023 1:57:52;Restaurant;8
+30;Cursus Nunc Mauris Industries;Ap #205-6730 Montes, Rd.;San Juan del Río;Austria;03/26/2023 7:06:54;Florist;43
+31;Neque Tellus PC;5995 Mauris St.;Canberra;Brazil;05/12/2022 10:41:57;Beauty;26
+32;Augue Ut Lacus Institute;Ap #352-2278 Fermentum Street;Seletar;Vietnam;01/17/2023 10:20:59;Press;32
+33;Hendrerit Id Foundation;P.O. Box 646, 6434 Amet, Road;Olivar;Norway;07/17/2022 1:43:35;Beauty;26
+34;Et Netus Corporation;3508 Euismod Street;Port Blair;Austria;04/23/2023 11:30:12;FoodTruck;1
+35;Ut Associates;460-3077 Tortor. Av.;Ribeirão Preto;Indonesia;12/04/2023 11:26:21;Press;13
+36;Et Malesuada Company;Ap #817-7392 Nec Av.;Antalya;Singapore;09/29/2023 4:42:51;Other;48
+37;Sit Industries;Ap #939-7352 Et Av.;Belfast;China;03/31/2023 3:48:27;Hotel;13
+38;A Tortor Industries;228-2100 Ac Rd.;Altmünster;Nigeria;12/06/2023 7:00:02;Restaurant;6
+39;Nisl Elementum Foundation;894-4998 Netus Av.;Canoas;South Korea;09/22/2022 2:28:45;Restaurant;38
+40;Lacus Etiam Inc.;P.O. Box 974, 8900 Nunc, St.;Nagar;Ukraine;06/13/2022 1:38:36;Other;19
+41;Nec LLC;4017 Sed Road;Chungju;Spain;02/01/2023 11:41:19;Other;20
+42;Volutpat Nunc Sit Institute;Ap #142-5475 Cursus, St.;Zamora de Hidalgo;Brazil;09/16/2022 2:25:22;Press;26
+43;Mollis Industries;411-5082 Amet Rd.;Darwin;Colombia;12/17/2023 7:13:27;Service;43
+44;Velit LLC;Ap #598-2547 In Rd.;Floreffe;Chile;12/15/2023 10:55:37;Press;37
+45;Ut Institute;Ap #854-8238 Vitae Street;Multan;Vietnam;04/30/2023 11:31:11;Beauty;31
+46;Integer Mollis Integer Foundation;P.O. Box 806, 735 Eu Rd.;Tortel;South Africa;05/20/2023 1:49:27;Service;27
+47;Lorem Foundation;689-251 In Av.;Zamość;Peru;09/04/2023 2:04:42;Other;34
+48;Aliquet Foundation;Ap #927-6400 At Av.;Tibet;United Kingdom;06/10/2022 10:07:24;FoodTruck;29
+49;Id Ante Nunc LLC;480-5234 Natoque Ave;Flekkefjord;Netherlands;11/05/2022 11:02:23;Press;20
+50;Ac Company;8052 Cum Street;Lauw;France;01/28/2024 10:43:00;Other;15
+51;Mauris Aliquam PC;978-4890 Aliquam, Ave;Rosenheim;Germany;01/21/2024 11:08:45;Other;25
+52;Volutpat Nunc PC;P.O. Box 156, 3296 Sed Street;Kohima;Italy;10/13/2023 8:36:19;Beauty;2
+53;Sed Incorporated;Ap #627-8495 Aliquam Road;Kavaratti;India;11/05/2023 9:40:54;FoodTruck;28
+54;Nisi Magna Ltd;P.O. Box 155, 5397 Imperdiet Ave;Oaxaca;Philippines;09/20/2022 1:10:32;Service;5
+55;Aliquam Corp.;803-8267 Imperdiet Ave;Morelia;Brazil;07/11/2022 8:59:50;Service;2
+56;Sit Amet Ornare Company;Ap #486-9555 Odio St.;Frederikstad;Netherlands;10/28/2023 7:17:16;Press;4
+57;Sapien Nunc Pulvinar Institute;Ap #203-9131 Aliquet Avenue;Guadalupe;Netherlands;02/25/2024 3:38:37;Restaurant;12
+58;Tortor Dictum Eu Industries;674-2192 Nulla St.;Fahler;Germany;06/23/2023 3:27:05;Service;16
+59;Aliquam Vulputate LLC;Ap #221-5035 Elementum, Rd.;Irapuato;Brazil;08/01/2023 11:55:06;Beauty;8
+60;Eleifend Cras Institute;6862 Tincidunt, Rd.;Dublin;Indonesia;08/02/2022 5:48:41;Florist;4
+61;Elementum Sem Corp.;P.O. Box 850, 4730 Quis Avenue;Chandigarh;Ukraine;06/02/2022 3:15:33;Service;10
+62;Semper Erat In Institute;Ap #428-3415 Lacus Road;Puerto Carreño;United States;03/24/2024 2:36:58;Hotel;22
+63;Hendrerit Consectetuer PC;Ap #628-3480 Integer Avenue;Việt Trì;Austria;12/16/2022 1:58:59;Restaurant;14
+64;Aliquet Magna LLP;Ap #718-9112 Ligula. Street;Belfast;Peru;11/26/2023 7:04:23;Press;33
+65;Mauris Sit Amet Associates;Ap #397-6046 Fusce Street;Ghanche;South Africa;08/14/2023 2:29:39;Beauty;11
+66;Mauris A Institute;839-3744 Nullam Avenue;Olsztyn;Ireland;09/30/2022 6:07:35;Press;48
+67;Nullam Vitae Corp.;680-4657 Donec St.;Lagos;Austria;12/19/2023 7:37:13;Beauty;35
+68;Lorem Vehicula Inc.;810-4532 Sapien Street;Chiclayo;Peru;11/13/2023 11:40:22;Press;32
+69;Felis Purus Institute;975-9184 Ipsum. Av.;Singkawang;Netherlands;10/17/2022 4:40:23;Beauty;6
+70;Semper Institute;P.O. Box 451, 7344 Turpis Ave;Piła;Belgium;02/17/2024 10:47:27;Press;26
+71;Libero Lacus Corp.;Ap #355-7187 Sapien. Rd.;Kirkcaldy;United Kingdom;01/16/2024 2:25:58;Press;11
+72;Dis Parturient Montes PC;5552 Vulputate Rd.;Shanxi;China;07/16/2023 4:32:40;Florist;30
+73;Arcu Vestibulum Ltd;666-4076 Erat Street;Gorzów Wielkopolski;Ireland;01/21/2024 7:18:24;Beauty;42
+74;Dolor Nonummy Ac Inc.;583-3427 Ac, Avenue;Ziarat;Poland;12/20/2022 11:20:39;Press;21
+75;Erat Neque Foundation;596-1207 A St.;Elbistan;New Zealand;06/01/2022 12:35:13;Hotel;46
+76;Sed Corp.;610-8995 Quis St.;Wonju;United Kingdom;08/07/2022 8:18:53;Service;30
+77;At Sem Molestie Consulting;Ap #139-3060 Sed Ave;Valenzuela;Ukraine;08/31/2022 1:25:30;FoodTruck;25
+78;Ac Orci Ut PC;Ap #322-7707 Ipsum Road;Canlaon;Indonesia;03/16/2023 4:04:07;Other;43
+79;Pede Ultrices Corporation;Ap #459-7576 Leo Avenue;Chimbote;Australia;06/01/2023 9:14:28;FoodTruck;27
+80;Erat Industries;976-4028 Imperdiet Avenue;Zlatoust;Netherlands;12/08/2022 6:55:14;Hotel;13
+81;Suspendisse Dui Associates;Ap #246-6940 Tristique St.;Alençon;Spain;11/13/2023 11:25:03;FoodTruck;9
+82;Blandit At Nisi Inc.;P.O. Box 539, 9657 Sed St.;Gore;Brazil;01/28/2023 1:13:22;Florist;46
+83;Iaculis Aliquet Diam Company;201-6042 Vehicula Avenue;Sousa;Belgium;06/21/2023 11:34:38;Hotel;5
+84;Quis LLP;7837 Sollicitudin Ave;Glasgow;India;07/18/2023 10:43:50;Restaurant;16
+85;Ultrices Posuere Cubilia Corp.;505-191 Torquent Rd.;Abbeville;Ireland;10/30/2022 3:03:16;Hotel;21
+86;Nec Diam Corp.;P.O. Box 560, 2569 Duis Street;Tczew;India;01/03/2024 12:37:16;Service;39
+87;Luctus Ut Ltd;Ap #924-9827 Sodales Av.;Maryborough;Belgium;11/14/2023 2:29:12;Press;22
+88;Aliquam Eros Turpis Institute;Ap #533-3564 Eget Road;Épernay;Nigeria;10/14/2022 9:34:12;Beauty;47
+89;Vulputate Lacus Incorporated;Ap #885-4676 Primis Avenue;San Francisco;United States;12/27/2022 9:14:34;Beauty;25
+90;Libero Est LLC;Ap #930-1953 Cubilia Road;Bydgoszcz;Nigeria;04/07/2023 8:08:01;FoodTruck;42
+91;Dignissim Lacus Foundation;120-4773 Facilisis. St.;Dutse;Germany;07/27/2023 9:38:06;Other;3
+92;Tempus Mauris Ltd;Ap #179-4089 Pharetra. Rd.;Mỹ Tho;France;07/01/2023 7:23:00;Florist;27
+93;In Mi Institute;707-3480 Fringilla Ave;Pskov;Australia;05/21/2022 2:03:29;Service;48
+94;Quam Incorporated;283-6136 Sed Av.;Khoái Châu;United States;02/14/2024 10:46:30;Hotel;7
+95;Nullam Suscipit Est PC;Ap #859-7227 Penatibus Street;Lagos;Sweden;05/15/2023 6:21:29;Restaurant;9
+96;Molestie Dapibus Ligula Foundation;Ap #533-548 Commodo Ave;Huntly;China;09/18/2022 9:45:57;Hotel;48
+97;Sem Ut Cursus Corp.;9686 Rutrum St.;Sungei Kadut;France;10/23/2022 5:12:41;FoodTruck;42
+98;Magna Suspendisse Tristique PC;P.O. Box 238, 8766 Enim. Ave;Buenaventura;Norway;03/18/2024 9:07:42;Beauty;23
+99;Vitae Nibh Donec Inc.;Ap #804-9661 Imperdiet Road;Denpasar;New Zealand;08/14/2023 9:21:36;Beauty;22
+100;Non Leo PC;956-3578 Augue St.;Inner Mongolia;Chile;10/07/2023 8:46:37;Beauty;3
