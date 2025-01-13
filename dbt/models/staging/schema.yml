@@ -10,16 +10,34 @@ sources:
         columns:
           - name: id
             description: Primary key
-            tests:
+            data_tests:
               - unique
               - not_null
-          - name: store_name
+          - name: name
             description: Name of the store
-            tests:
+            data_tests:
               - not_null
-          - name: location
-            description: Store location
-            tests:
+          - name: address
+            description: Store address
+          - name: city
+            description: Store city
+            data_tests:
+              - not_null
+          - name: country
+            description: Store country
+            data_tests:
+              - not_null
+          - name: created_at
+            description: Store creation timestamp
+            data_tests:
+              - not_null
+          - name: typology
+            description: Store typology/type
+            data_tests:
+              - not_null
+          - name: customer_id
+            description: ID of the customer who owns the store
+            data_tests:
               - not_null
 
       - name: transactions
@@ -27,23 +45,51 @@ sources:
         columns:
           - name: id
             description: Primary key
-            tests:
+            data_tests:
               - unique
               - not_null
-          - name: store_id
-            description: Foreign key to stores
-            tests:
+          - name: device_id
+            description: Foreign key to devices
+            data_tests:
               - not_null
               - relationships:
-                  to: ref('stg_stores')
-                  field: store_id
+                  to: ref('stg_devices')
+                  field: device_id
+          - name: product_name
+            description: Name of the product
+            data_tests:
+              - not_null
+          - name: product_sku
+            description: Stock keeping unit (unique product identifier)
+            data_tests:
+              - not_null
+          - name: category_name
+            description: Product category name
+            data_tests:
+              - not_null
           - name: amount
             description: Transaction amount in USD
-            tests:
+            data_tests:
               - not_null
-          - name: timestamp
+          - name: status
+            description: Transaction status
+            data_tests:
+              - not_null
+          - name: card_number
+            description: Payment card number
+            data_tests:
+              - not_null
+          - name: cvv
+            description: Card verification value
+            data_tests:
+              - not_null
+          - name: created_at
+            description: Record creation timestamp
+            data_tests:
+              - not_null
+          - name: happened_at
             description: Transaction timestamp
-            tests:
+            data_tests:
               - not_null
 
       - name: devices
@@ -51,16 +97,19 @@ sources:
         columns:
           - name: id
             description: Primary key
-            tests:
+            data_tests:
               - unique
               - not_null
           - name: store_id
             description: Foreign key to stores
-            tests:
+            data_tests:
               - not_null
-          - name: device_type
+              - relationships:
+                  to: source('crm', 'stores')
+                  field: id
+          - name: type
             description: Type of device
-            tests:
+            data_tests:
               - not_null
 
 models:
@@ -69,16 +118,34 @@ models:
     columns:
       - name: store_id
         description: Unique identifier for each store
-        tests:
+        data_tests:
           - unique
           - not_null
       - name: store_name
         description: Name of the store
-        tests:
+        data_tests:
           - not_null
-      - name: location
-        description: Store location
-        tests:
+      - name: address
+        description: Store address
+      - name: city
+        description: Store city
+        data_tests:
+          - not_null
+      - name: country
+        description: Store country
+        data_tests:
+          - not_null
+      - name: typology
+        description: Store typology/type
+        data_tests:
+          - not_null
+      - name: customer_id
+        description: ID of the customer who owns the store
+        data_tests:
+          - not_null
+      - name: created_at
+        description: Store creation timestamp
+        data_tests:
           - not_null
 
   - name: stg_transactions
@@ -86,21 +153,41 @@ models:
     columns:
       - name: transaction_id
         description: Unique identifier for each transaction
-        tests:
+        data_tests:
           - unique
           - not_null
-      - name: store_id
-        description: Foreign key to stores table
-        tests:
+      - name: device_id
+        description: Foreign key to devices table
+        data_tests:
           - not_null
           - relationships:
-              to: ref('stg_stores')
-              field: store_id
+              to: ref('stg_devices')
+              field: device_id
+      - name: product_name
+        description: Name of the product
+        data_tests:
+          - not_null
+      - name: product_sku
+        description: Stock keeping unit (unique product identifier)
+        data_tests:
+          - not_null
+      - name: category_name
+        description: Product category name
+        data_tests:
+          - not_null
       - name: amount
         description: Transaction amount in USD
-        tests:
+        data_tests:
+          - not_null
+      - name: status
+        description: Transaction status
+        data_tests:
           - not_null
       - name: timestamp
         description: Transaction timestamp
-        tests:
+        data_tests:
+          - not_null
+      - name: created_at
+        description: Record creation timestamp
+        data_tests:
           - not_null 

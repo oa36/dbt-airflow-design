@@ -11,5 +11,10 @@ with source as (
 select
     id as store_id,
     name as store_name,
-    city as location
+    address,
+    city,
+    country,
+    typology,
+    customer_id,
+    created_at
 from source 
