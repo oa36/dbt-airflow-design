@@ -91,18 +91,26 @@ The marts layer creates final business-facing data models with specific use case
 - Provides data ready for reporting and analysis
 
 Models:
-- `mart_top_stores`: Aggregates store performance metrics:
+- `mart_top_stores`: Answers "Who are our best-performing stores?"
   - Store identification (ID and name)
   - Total unique transaction count
   - Total transaction amount
   - Orders results by total amount in descending order
-- `mart_store_first_transactions`: Analyzes store performance by tracking:
+- `mart_store_first_transactions`: Answers "How quickly do stores become active?"
   - First transaction timestamp
   - Fifth transaction timestamp
   - Time taken to reach fifth transaction
-- `mart_device_transactions`: Provides device performance metrics:
+- `mart_device_transactions`: Answers "What's the distribution of transactions across device types?"
   - Transaction count by device type
   - Transaction percentage distribution
+- `mart_top_products`: Answers "What are our best-selling products?"
+  - Top 10 products by transaction count
+  - Total and average transaction amounts per product
+  - Product categorization
+- `mart_avg_amount_by_typology`: Answers "How do transaction patterns vary by store type and location?"
+  - Average transaction amount by store typology and country
+  - Transaction count and store count per group
+  - Total amount per typology-country combination
 
 Each layer builds upon the previous one, ensuring:
 - Clear data lineage
