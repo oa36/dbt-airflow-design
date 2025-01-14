@@ -216,8 +216,8 @@ Note: When running locally, dbt uses the `dev` target by default (configured in 
 
 ### 2. Airflow UI
 1. Access Airflow UI at `http://localhost:8080`
-   - Username: airflow
-   - Password: airflow
+   - Username: admin
+   - Password: admin
 2. Navigate to DAGs view
 3. Find `dbt_payment_analytics` DAG
 4. Click the "Play" button to trigger a manual run
