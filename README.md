@@ -60,8 +60,6 @@ The project follows a layered data modeling approach to ensure clean, maintainab
 
 *The diagram above shows the data lineage of our dbt models, illustrating how data flows from staging through intermediate to marts layer.*
 
-The dbt project is translated into an Airflow DAG to enable granular control over model execution (e.g., ability to restart from failure points without full pipeline reruns) and enhanced observability.
-
 ### Staging Layer (Basic Cleaning)
 The staging layer focuses on basic data cleaning and standardization:
 - Renames columns to follow consistent naming conventions
