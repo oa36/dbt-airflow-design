@@ -1,0 +1,41 @@
+version: 2
+
+models:
+  - name: int_store_transactions
+    description: Enriched transactions data with store and device information
+    columns:
+      - name: transaction_id
+        description: Unique identifier for each transaction
+        tests:
+          - unique
+          - not_null
+      
+      - name: store_id
+        description: Unique identifier for each store
+        tests:
+          - not_null
+      
+      - name: device_id
+        description: Unique identifier for each device
+        tests:
+          - not_null
+      
+      - name: amount
+        description: Transaction amount
+        tests:
+          - not_null
+      
+      - name: timestamp
+        description: Transaction timestamp
+        tests:
+          - not_null
+      
+      - name: product_sku
+        description: Product SKU
+        tests:
+          - not_null
+      
+      - name: product_name
+        description: Product name
+        tests:
+          - not_null 

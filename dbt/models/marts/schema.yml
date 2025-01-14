@@ -1,0 +1,90 @@
+version: 2
+
+models:
+  - name: mart_top_products
+    description: Top 10 products by transaction count
+    columns:
+      - name: product_sku
+        description: Product SKU
+        tests:
+          - not_null
+      
+      - name: total_transactions
+        description: Total number of transactions for the product
+        tests:
+          - not_null
+      
+      - name: total_amount
+        description: Total amount transacted for the product
+        tests:
+          - not_null
+
+  - name: mart_avg_amount_by_typology
+    description: Average transaction amounts by store typology and country
+    columns:
+      - name: typology
+        description: Store typology
+        tests:
+          - not_null
+      
+      - name: country
+        description: Store country
+        tests:
+          - not_null
+      
+      - name: average_transaction_amount
+        description: Average transaction amount for the typology and country
+        tests:
+          - not_null
+
+  - name: mart_top_stores
+    description: Top 10 stores by total transaction amount
+    columns:
+      - name: store_id
+        description: Store identifier
+        tests:
+          - not_null
+          - unique
+      
+      - name: total_amount
+        description: Total transaction amount for the store
+        tests:
+          - not_null
+
+  - name: mart_store_first_transactions
+    description: Analysis of time between first and fifth transaction for stores
+    columns:
+      - name: store_id
+        description: Store identifier
+        tests:
+          - not_null
+          - unique
+      
+      - name: first_tx_time
+        description: Timestamp of first transaction
+        tests:
+          - not_null
+      
+      - name: fifth_tx_time
+        description: Timestamp of fifth transaction
+        tests:
+          - not_null
+
+  - name: mart_device_transactions
+    description: Transaction distribution by device type
+    columns:
+      - name: device_type
+        description: Type of device
+        tests:
+          - not_null
+          - unique
+      
+      - name: transaction_count
+        description: Number of transactions for the device type
+        tests:
+          - not_null
+      
+      - name: transaction_percentage
+        description: Percentage of total transactions
+        tests:
+          - not_null 
