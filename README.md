@@ -191,11 +191,38 @@ This command will spin up 5 Docker containers: 4 for Airflow components (webserv
 
 ## Usage
 
-### Running the Pipeline
+The pipeline runs automatically daily at 5 AM through Airflow, but you can also trigger it in two ways:
 
-The pipeline runs automatically daily at 5 AM through Airflow, but you can also trigger it manually from the Airflow UI.
+### 1. Local Development with dbt Core
+```bash
+# Navigate to dbt directory
+cd dbt
 
-### Monitoring
+# Activate virtual environment
+pipenv shell
+
+# Run dbt models
+dbt run    # Default target is 'dev', models will be created in schema 'dbt_test_user'
+
+# Optional: Run specific models
+dbt run --select staging
+dbt run --select marts.fct_transactions
+```
+
+Note: When running locally, dbt uses the `dev` target by default (configured in `profiles.yml`). This means:
+- Models will be created in a development schema: `dbt_{user_name}`
+- This keeps development work isolated from production schemas
+- To run against production, explicitly use: `dbt run --target prod`
+
+### 2. Airflow UI
+1. Access Airflow UI at `http://localhost:8080`
+   - Username: airflow
+   - Password: airflow
+2. Navigate to DAGs view
+3. Find `dbt_payment_analytics` DAG
+4. Click the "Play" button to trigger a manual run
+
+## Monitoring
 
 1. **Airflow Dashboard**
    - View DAG runs and logs
