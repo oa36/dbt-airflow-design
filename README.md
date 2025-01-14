@@ -155,7 +155,7 @@ Consider dbt Cloud when:
 
 1. Clone the repository:
 ```
-git clone <repository-url>
+git clone https://github.com/oa36/dbt-airflow-design.git
 cd dbt-airflow-design
 ```
 
